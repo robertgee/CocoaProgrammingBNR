@@ -8,13 +8,18 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface SpeakLineAppDelegate : NSObject <NSApplicationDelegate> {
+@interface SpeakLineAppDelegate : NSObject <NSApplicationDelegate, NSSpeechSynthesizerDelegate> {
+    NSArray *_voices;
     NSSpeechSynthesizer *_speechSynth;
 }
 
 @property (nonatomic, weak) IBOutlet NSTextField *textField;
-@property (weak) IBOutlet NSButton *stopIt;
-@property (weak) IBOutlet NSButton *sayIt;
+
+- (IBAction)stopIt:(id)sender;
+- (IBAction)sayIt:(id)sender;
+@property (weak) IBOutlet NSButton *stopButton;
+@property (weak) IBOutlet NSButton *speakButton;
+@property (weak) IBOutlet NSTableView *tableView;
 
 @end
 
