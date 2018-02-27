@@ -5,8 +5,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="Document">
+        <customObject id="-2" userLabel="File's Owner" customClass="RMDocument">
             <connections>
+                <outlet property="employeeController" destination="aDt-jm-grO" id="Pqr-Pe-l1i"/>
+                <outlet property="tableView" destination="mm9-mH-9WD" id="b8Q-80-kFc"/>
                 <outlet property="window" destination="xOd-HO-29H" id="JIz-fz-R2o"/>
             </connections>
         </customObject>
@@ -30,7 +32,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="add:" target="aDt-jm-grO" id="sYe-dH-uGO"/>
+                            <action selector="createEmployee:" target="-2" id="a4z-Wd-b3j"/>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Fv-S3-8P7">
@@ -102,11 +104,11 @@ CA
                             </subviews>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="fpD-Od-5ST">
-                            <rect key="frame" x="1" y="7" width="0.0" height="16"/>
+                            <rect key="frame" x="-7" y="8" width="0.0" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="Mhv-rQ-C8m">
-                            <rect key="frame" x="-15" y="23" width="16" height="0.0"/>
+                            <rect key="frame" x="-14" y="15" width="15" height="0.0"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <tableHeaderView key="headerView" id="Zuq-Ym-UKV">
@@ -119,7 +121,7 @@ CA
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-x8E"/>
             </connections>
-            <point key="canvasLocation" x="89" y="122"/>
+            <point key="canvasLocation" x="150" y="157"/>
         </window>
         <arrayController objectClassName="Person" id="aDt-jm-grO">
             <declaredKeys>
