@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E14FE3BC204760D400599C33 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14FE3BB204760D400599C33 /* AppController.m */; };
+		E14FE3BF204762B300599C33 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14FE3BE204762B300599C33 /* PreferenceController.m */; };
+		E199B4302047647D00AF633E /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = E199B42F2047647D00AF633E /* Preferences.xib */; };
 		E1F1AA92203E7BDB00571F0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1F1AA91203E7BDB00571F0E /* Assets.xcassets */; };
 		E1F1AA95203E7BDB00571F0E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1F1AA93203E7BDB00571F0E /* MainMenu.xib */; };
 		E1F1AA98203E7BDB00571F0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F1AA97203E7BDB00571F0E /* main.m */; };
@@ -17,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E14FE3BA204760D400599C33 /* AppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		E14FE3BB204760D400599C33 /* AppController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		E14FE3BD204762B300599C33 /* PreferenceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
+		E14FE3BE204762B300599C33 /* PreferenceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
+		E199B42F2047647D00AF633E /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 		E1F1AA85203E7BDB00571F0E /* RaiseMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiseMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F1AA91203E7BDB00571F0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1F1AA94203E7BDB00571F0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -62,6 +70,8 @@
 		E1F1AA87203E7BDB00571F0E /* RaiseMan */ = {
 			isa = PBXGroup;
 			children = (
+				E14FE3BD204762B300599C33 /* PreferenceController.h */,
+				E14FE3BE204762B300599C33 /* PreferenceController.m */,
 				E1F1AAB1203FB7ED00571F0E /* RMDocument.xib */,
 				E1F1AAAB203FB73100571F0E /* RMAppDelegate.h */,
 				E1F1AAAE203FB73100571F0E /* RMAppDelegate.m */,
@@ -74,6 +84,9 @@
 				E1F1AA96203E7BDB00571F0E /* Info.plist */,
 				E1F1AA97203E7BDB00571F0E /* main.m */,
 				E1F1AA99203E7BDB00571F0E /* RaiseMan.entitlements */,
+				E14FE3BA204760D400599C33 /* AppController.h */,
+				E14FE3BB204760D400599C33 /* AppController.m */,
+				E199B42F2047647D00AF633E /* Preferences.xib */,
 			);
 			path = RaiseMan;
 			sourceTree = "<group>";
@@ -138,6 +151,7 @@
 			files = (
 				E1F1AAB3203FB7ED00571F0E /* RMDocument.xib in Resources */,
 				E1F1AA92203E7BDB00571F0E /* Assets.xcassets in Resources */,
+				E199B4302047647D00AF633E /* Preferences.xib in Resources */,
 				E1F1AA95203E7BDB00571F0E /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +164,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1F1AA98203E7BDB00571F0E /* main.m in Sources */,
+				E14FE3BC204760D400599C33 /* AppController.m in Sources */,
+				E14FE3BF204762B300599C33 /* PreferenceController.m in Sources */,
 				E1F1AAB0203FB73100571F0E /* RMAppDelegate.m in Sources */,
 				E1F1AAA9203FB52800571F0E /* Person.m in Sources */,
 				E1F1AAAF203FB73100571F0E /* RMDocument.m in Sources */,
