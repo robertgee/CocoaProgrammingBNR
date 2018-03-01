@@ -40,7 +40,10 @@ NSString * const BNRColorChangedNotification = @"BNRColorChanged";
     
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     NSLog(@"Sending Notification");
-    [nc postNotificationName:BNRColorChangedNotification object:self];
+    NSDictionary *d = [NSDictionary dictionaryWithObject:color forKey:@"color"];
+    [nc postNotificationName:BNRColorChangedNotification
+                      object:self
+                    userInfo:d];
 }
 
 - (IBAction)changeNewEmptyDoc:(id)sender
