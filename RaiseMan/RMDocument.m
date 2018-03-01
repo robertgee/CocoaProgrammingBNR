@@ -8,6 +8,7 @@
 
 #import "RMDocument.h"
 #import "Person.h"
+#import "PreferenceController.h"
 
 @interface RMDocument ()
 
@@ -48,6 +49,15 @@ static void *RMDocumentKVOContext;
     if (self) {
         // Add your subclass-specific initialization here.
         employees = [[NSMutableArray alloc]init];
+        
+        NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+        
+        [nc addObserver:self
+               selector:@selector(handleColorChange:)
+                   name:BNRColorChangedNotification
+                 object:nil];
+        
+        NSLog(@"Registered with notification Center");
     }
     return self;
 }
@@ -66,6 +76,8 @@ static void *RMDocumentKVOContext;
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController
 {
     [super windowControllerDidLoadNib:aController];
+    
+    [tableView setBackgroundColor:[PreferenceController preferenceTableBgColor]];
 }
 
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError {
@@ -239,6 +251,16 @@ static void *RMDocumentKVOContext;
                       row:row
                 withEvent:nil
                    select:YES];
+}
+
+- (void) handleColorChange:(NSNotification *)note
+{
+    NSLog(@"Received notification: %@", note);
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
