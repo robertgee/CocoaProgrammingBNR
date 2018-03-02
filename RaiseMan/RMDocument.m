@@ -260,6 +260,30 @@ static void *RMDocumentKVOContext;
     [tableView setBackgroundColor:color];
 }
 
+- (IBAction)removeEmployee:(id)sender
+{
+    NSArray *selectedPeople = [employeeController selectedObjects];
+    
+    NSString *infoText = [NSString stringWithFormat:@"Number %lu people will be removed.", [selectedPeople count]];
+    
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:@"Do you really want to remove these people?"];
+    [alert setInformativeText:infoText];
+    [alert addButtonWithTitle:@"Remove"];
+    [alert addButtonWithTitle:@"Cancel"];
+    [alert setAlertStyle:NSAlertStyleWarning];
+    
+    NSLog(@"Starting alert sheet");
+    //[alert beginSheetModalForWindow:[tableView window] modalDelegate:self didEndSelector:@selector(alertEnded:code:context:) contextInfo:NULL];
+    [alert beginSheetModalForWindow:[tableView window] completionHandler:^(NSInteger result) {
+         if (result == NSAlertFirstButtonReturn){
+             // The argument to remove: is ignored
+             // The array controller will delete the selected objects
+             [employeeController remove:nil];
+         }
+     }];
+}
+
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];

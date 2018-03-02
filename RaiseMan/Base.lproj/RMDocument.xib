@@ -46,7 +46,7 @@ CA
 </string>
                         </buttonCell>
                         <connections>
-                            <action selector="remove:" target="aDt-jm-grO" id="FZ2-sm-Gx5"/>
+                            <action selector="removeEmployee:" target="-2" id="s9J-tT-Vyl"/>
                             <binding destination="aDt-jm-grO" name="enabled" keyPath="canRemove" id="RK3-OJ-o0Q"/>
                         </connections>
                     </button>
@@ -57,7 +57,7 @@ CA
                             <rect key="frame" x="1" y="0.0" width="308" height="134"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="Zuq-Ym-UKV" id="mm9-mH-9WD">
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" autosaveColumns="NO" headerView="Zuq-Ym-UKV" id="mm9-mH-9WD">
                                     <rect key="frame" x="0.0" y="0.0" width="308" height="111"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
