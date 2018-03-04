@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "StretchView.h"
 
 @interface AppDelegate ()
 
@@ -121,6 +122,20 @@
     }
 
     return NSTerminateNow;
+}
+
+- (IBAction)showOpenPanel:(id)sender
+{
+    __block NSOpenPanel *panel = [NSOpenPanel openPanel];
+    [panel setAllowedFileTypes:[NSImage imageTypes]];
+    
+    [panel beginSheetModalForWindow:[stretchView window] completionHandler:^ (NSInteger result) {
+        if (result == NSModalResponseOK) {
+            NSImage *image = [[NSImage alloc] initWithContentsOfURL: [panel URL]];
+            [stretchView setImage:image];
+        }
+        panel = nil; // prevent strong ref cycle
+    }];
 }
 
 @end

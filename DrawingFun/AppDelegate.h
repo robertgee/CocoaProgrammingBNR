@@ -9,10 +9,15 @@
 #import <Cocoa/Cocoa.h>
 #import <CoreData/CoreData.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@class StretchView;
+
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+    IBOutlet StretchView *stretchView;
+}
 
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 
+- (IBAction)showOpenPanel:(id)sender;
 
 @end
 
