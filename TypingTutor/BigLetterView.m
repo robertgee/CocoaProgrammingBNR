@@ -161,5 +161,50 @@
     return string;
 }
 
+- (void)writeToPasteBoard:(NSPasteboard *)pb
+{
+    // Copy data to the pasteboard
+    [pb clearContents];
+    [pb writeObjects:[NSArray arrayWithObject:string]];
+}
+
+- (BOOL)readFromPasteboard:(NSPasteboard *)pb
+{
+    NSArray *classes = [NSArray arrayWithObject:[NSString class]];
+    NSArray *objects = [pb readObjectsForClasses:classes
+                                         options:nil];
+    
+    if ([objects count] > 0) {
+        // Read the string from the pasteboard
+        NSString *value = [objects objectAtIndex:0];
+        
+        // Our view can handle only one letter
+        if ([value length] == 1) {
+            [self setString:value];
+            return YES;
+        }
+    }
+    return NO;
+}
+
+- (IBAction)cut:(id)sender
+{
+    [self copy:sender];
+    [self setString:@""];
+}
+
+- (IBAction)copy:(id)sender
+{
+    NSPasteboard *pb = [NSPasteboard generalPasteboard];
+    [self writeToPasteBoard:pb];
+}
+
+- (IBAction)paste:(id)sender
+{
+    NSPasteboard *pb = [NSPasteboard generalPasteboard];
+    if (![self readFromPasteboard:pb]) {
+        NSBeep();
+    }
+}
 
 @end
