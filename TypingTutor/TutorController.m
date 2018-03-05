@@ -110,4 +110,12 @@
     }
 }
 
+- (BOOL)control:(NSControl *)control
+    didFailToFormatString:(NSString *)string
+    errorDescription:(NSString *)error
+{
+    NSLog(@"TutorController told that formatting of %@ failed: %@", string, error);
+    return NO;
+}
+
 @end

@@ -14,6 +14,7 @@
 		E1820E88204CB8BD005FA287 /* BigLetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1820E87204CB8BD005FA287 /* BigLetterView.m */; };
 		E1820E8E204CDE7F005FA287 /* NSString+FirstLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = E1820E8D204CDE7F005FA287 /* NSString+FirstLetter.m */; };
 		E1820E91204D9022005FA287 /* TutorController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1820E90204D9022005FA287 /* TutorController.m */; };
+		E18C684E204DBC1200C456E1 /* ColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E18C684D204DBC1200C456E1 /* ColorFormatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		E1820E8D204CDE7F005FA287 /* NSString+FirstLetter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+FirstLetter.m"; sourceTree = "<group>"; };
 		E1820E8F204D9022005FA287 /* TutorController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TutorController.h; sourceTree = "<group>"; };
 		E1820E90204D9022005FA287 /* TutorController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TutorController.m; sourceTree = "<group>"; };
+		E18C684C204DBC1200C456E1 /* ColorFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorFormatter.h; sourceTree = "<group>"; };
+		E18C684D204DBC1200C456E1 /* ColorFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorFormatter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,8 @@
 				E1820E8D204CDE7F005FA287 /* NSString+FirstLetter.m */,
 				E1820E8F204D9022005FA287 /* TutorController.h */,
 				E1820E90204D9022005FA287 /* TutorController.m */,
+				E18C684C204DBC1200C456E1 /* ColorFormatter.h */,
+				E18C684D204DBC1200C456E1 /* ColorFormatter.m */,
 			);
 			path = TypingTutor;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 				E1820E7F204CB63F005FA287 /* main.m in Sources */,
 				E1820E88204CB8BD005FA287 /* BigLetterView.m in Sources */,
 				E1820E77204CB63F005FA287 /* AppDelegate.m in Sources */,
+				E18C684E204DBC1200C456E1 /* ColorFormatter.m in Sources */,
 				E1820E91204D9022005FA287 /* TutorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
