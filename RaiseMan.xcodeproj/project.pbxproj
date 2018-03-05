@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E14FE3BC204760D400599C33 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14FE3BB204760D400599C33 /* AppController.m */; };
 		E14FE3BF204762B300599C33 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14FE3BE204762B300599C33 /* PreferenceController.m */; };
+		E18C6851204DD1A800C456E1 /* PeopleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E18C6850204DD1A800C456E1 /* PeopleView.m */; };
 		E199B4302047647D00AF633E /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = E199B42F2047647D00AF633E /* Preferences.xib */; };
 		E1F1AA92203E7BDB00571F0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1F1AA91203E7BDB00571F0E /* Assets.xcassets */; };
 		E1F1AA95203E7BDB00571F0E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1F1AA93203E7BDB00571F0E /* MainMenu.xib */; };
@@ -24,6 +25,8 @@
 		E14FE3BB204760D400599C33 /* AppController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		E14FE3BD204762B300599C33 /* PreferenceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
 		E14FE3BE204762B300599C33 /* PreferenceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
+		E18C684F204DD1A800C456E1 /* PeopleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeopleView.h; sourceTree = "<group>"; };
+		E18C6850204DD1A800C456E1 /* PeopleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeopleView.m; sourceTree = "<group>"; };
 		E199B42F2047647D00AF633E /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 		E1F1AA85203E7BDB00571F0E /* RaiseMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiseMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F1AA91203E7BDB00571F0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 				E14FE3BA204760D400599C33 /* AppController.h */,
 				E14FE3BB204760D400599C33 /* AppController.m */,
 				E199B42F2047647D00AF633E /* Preferences.xib */,
+				E18C684F204DD1A800C456E1 /* PeopleView.h */,
+				E18C6850204DD1A800C456E1 /* PeopleView.m */,
 			);
 			path = RaiseMan;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 				E1F1AA98203E7BDB00571F0E /* main.m in Sources */,
 				E14FE3BC204760D400599C33 /* AppController.m in Sources */,
 				E14FE3BF204762B300599C33 /* PreferenceController.m in Sources */,
+				E18C6851204DD1A800C456E1 /* PeopleView.m in Sources */,
 				E1F1AAB0203FB73100571F0E /* RMAppDelegate.m in Sources */,
 				E1F1AAA9203FB52800571F0E /* Person.m in Sources */,
 				E1F1AAAF203FB73100571F0E /* RMDocument.m in Sources */,

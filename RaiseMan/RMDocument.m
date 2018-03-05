@@ -9,6 +9,7 @@
 #import "RMDocument.h"
 #import "Person.h"
 #import "PreferenceController.h"
+#import "PeopleView.h"
 
 @interface RMDocument ()
 
@@ -282,6 +283,15 @@ static void *RMDocumentKVOContext;
              [employeeController remove:nil];
          }
      }];
+}
+
+- (NSPrintOperation *)printOperationWithSettings:(NSDictionary *)ps error:(NSError **)e
+{
+    PeopleView *view = [[PeopleView alloc] initWithPeople:employees];
+    NSPrintInfo *printInfo = [self printInfo];
+    NSPrintOperation *printOp = [NSPrintOperation printOperationWithView:view
+                                                               printInfo:printInfo];
+    return printOp;
 }
 
 - (void)dealloc
