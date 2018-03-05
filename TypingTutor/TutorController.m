@@ -11,6 +11,24 @@
 
 @implementation TutorController
 
+- (IBAction)showSpeedSheet:(id)sender
+{
+    [NSApp beginSheet:speedSheet
+       modalForWindow:[inLetterView window]
+        modalDelegate:NULL
+       didEndSelector:NULL
+          contextInfo:NULL];
+}
+
+- (IBAction)endSpeedSheet:(id)sender
+{
+    // Return to normal envent handling
+    [NSApp endSheet:speedSheet];
+    
+    // Hide the sheet
+    [speedSheet orderOut:sender];
+}
+
 - (id)init
 {
     self = [super init];

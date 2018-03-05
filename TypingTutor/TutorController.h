@@ -14,6 +14,7 @@
     // Outlets
     IBOutlet BigLetterView *inLetterView;
     IBOutlet BigLetterView *outLetterView;
+    IBOutlet NSWindow *speedSheet;
     
     // Data
     NSArray *letters;
@@ -27,6 +28,10 @@
 }
 
 - (IBAction)stopGo:(id)sender;
+- (IBAction)showSpeedSheet:(id)sender;
+- (IBAction)endSpeedSheet:(id)sender;
+
+
 - (void)updateElapsedTime;
 - (void)resetElapsedTIme;
 - (void)showAnotherLetter;
