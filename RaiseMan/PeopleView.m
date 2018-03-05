@@ -56,7 +56,7 @@
         [nameString drawInRect:nameRect withAttributes:attributes];
         
         raiseRect.origin.y = nameRect.origin.y;
-        NSString *raiseString=[NSString stringWithFormat:@"%4.1f%%",
+        NSString *raiseString=[NSString stringWithFormat:@"%4lf",
                                [p expectedRaise]];
         [raiseString drawInRect:raiseRect withAttributes:attributes];
     }
