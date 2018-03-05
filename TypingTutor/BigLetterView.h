@@ -12,6 +12,7 @@
     NSColor *bgColor;
     NSString *string;
     NSMutableDictionary *attributes;
+    NSEvent *mouseDownEvent;
 }
 
 @property (strong) NSColor *bgColor;
