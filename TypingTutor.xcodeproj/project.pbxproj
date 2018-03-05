@@ -12,6 +12,7 @@
 		E1820E7C204CB63F005FA287 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1820E7A204CB63F005FA287 /* MainMenu.xib */; };
 		E1820E7F204CB63F005FA287 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1820E7E204CB63F005FA287 /* main.m */; };
 		E1820E88204CB8BD005FA287 /* BigLetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1820E87204CB8BD005FA287 /* BigLetterView.m */; };
+		E1820E8E204CDE7F005FA287 /* NSString+FirstLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = E1820E8D204CDE7F005FA287 /* NSString+FirstLetter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		E1820E80204CB63F005FA287 /* TypingTutor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TypingTutor.entitlements; sourceTree = "<group>"; };
 		E1820E86204CB8BD005FA287 /* BigLetterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigLetterView.h; sourceTree = "<group>"; };
 		E1820E87204CB8BD005FA287 /* BigLetterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigLetterView.m; sourceTree = "<group>"; };
+		E1820E8C204CDE7F005FA287 /* NSString+FirstLetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+FirstLetter.h"; sourceTree = "<group>"; };
+		E1820E8D204CDE7F005FA287 /* NSString+FirstLetter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+FirstLetter.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				E1820E80204CB63F005FA287 /* TypingTutor.entitlements */,
 				E1820E86204CB8BD005FA287 /* BigLetterView.h */,
 				E1820E87204CB8BD005FA287 /* BigLetterView.m */,
+				E1820E8C204CDE7F005FA287 /* NSString+FirstLetter.h */,
+				E1820E8D204CDE7F005FA287 /* NSString+FirstLetter.m */,
 			);
 			path = TypingTutor;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1820E8E204CDE7F005FA287 /* NSString+FirstLetter.m in Sources */,
 				E1820E7F204CB63F005FA287 /* main.m in Sources */,
 				E1820E88204CB8BD005FA287 /* BigLetterView.m in Sources */,
 				E1820E77204CB63F005FA287 /* AppDelegate.m in Sources */,

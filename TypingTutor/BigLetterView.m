@@ -7,6 +7,7 @@
 //
 
 #import "BigLetterView.h"
+#import "NSString+FirstLetter.h"
 
 @implementation BigLetterView
 
@@ -178,11 +179,8 @@
         // Read the string from the pasteboard
         NSString *value = [objects objectAtIndex:0];
         
-        // Our view can handle only one letter
-        if ([value length] == 1) {
-            [self setString:value];
-            return YES;
-        }
+        [self setString:[value bnr_firstLetter]];
+        return YES;
     }
     return NO;
 }
