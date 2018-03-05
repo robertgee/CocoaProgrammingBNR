@@ -47,6 +47,8 @@
     [self prepareAttributes];
     bgColor = [NSColor yellowColor];
     string = @" ";
+    [self registerForDraggedTypes:
+        [NSArray arrayWithObject:NSPasteboardTypeString]];
 }
 
 - (void)keyDown:(NSEvent *)event
@@ -82,9 +84,18 @@
     
     // Drawing code here.
     NSRect bounds = [self bounds];
-    [bgColor set];
-    [NSBezierPath fillRect:bounds];
     
+    // Draw gradient background if highlighted
+    if (highlighted) {
+        NSGradient *gr;
+        gr = [[NSGradient alloc] initWithStartingColor:[NSColor whiteColor]
+                                           endingColor:bgColor];
+    }
+    else {
+        [bgColor set];
+        [NSBezierPath fillRect:bounds];
+    }
+
     [self drawStringCenteredIn:bounds];
     
     // Am I the window's first responder?
@@ -207,7 +218,7 @@
 
 - (NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)flag
 {
-    return NSDragOperationCopy;
+    return NSDragOperationCopy | NSDragOperationDelete;
 }
 
 - (void) mouseDown:(NSEvent *)event
@@ -264,5 +275,52 @@
     [self dragImage:anImage at:p offset:NSZeroSize event:mouseDownEvent pasteboard:pb source:self slideBack:YES];
  }
 
+- (void)draggedImage:(NSImage *)image
+             endedAt:(NSPoint)screenPoint
+            operation:(NSDragOperation)operation
+{
+    if (operation == NSDragOperationDelete) {
+        [self setString:@""];
+    }
+}
+
+#pragma mark Dragging Destination
+
+- (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender
+{
+    NSLog(@"draggingEntered:");
+    if ([sender draggingSource] == self) {
+        return NSDragOperationNone;
+    }
+    
+    highlighted = YES;
+    [self setNeedsLayout:YES];
+    return NSDragOperationCopy;
+}
+
+- (void)draggingExited:(id<NSDraggingInfo>)sender
+{
+    NSLog(@"draggingExited:");
+    highlighted = NO;
+    [self setNeedsDisplay:YES];
+}
+
+- (BOOL)prepareForDragOperation:(id<NSDraggingInfo>)sender
+{
+    NSPasteboard *pb = [sender draggingPasteboard];
+    if (![self readFromPasteboard:pb]) {
+        NSLog(@"Error: Could not read from dragging pasteboard");
+        return NO;
+    }
+    return YES;
+
+}
+
+- (void)concludeDragOperation:(id<NSDraggingInfo>)sender
+{
+    NSLog(@"concludeDragOperation");
+    highlighted = NO;
+    [self setNeedsDisplay:YES];
+}
 
 @end

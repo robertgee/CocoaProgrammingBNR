@@ -13,6 +13,7 @@
     NSString *string;
     NSMutableDictionary *attributes;
     NSEvent *mouseDownEvent;
+    BOOL highlighted;
 }
 
 @property (strong) NSColor *bgColor;
