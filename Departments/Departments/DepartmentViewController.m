@@ -19,7 +19,7 @@
     self = [super initWithNibName:@"DepartmentViewController" bundle:nil];
     
     if (self) {
-        [self setTitle:@"Departmens"];
+        [self setTitle:@"Departments"];
     }
     
     return self;
