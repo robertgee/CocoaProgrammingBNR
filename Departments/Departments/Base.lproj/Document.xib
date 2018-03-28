@@ -26,27 +26,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box fixedFrame="YES" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="jUE-Uj-R0t">
-                        <rect key="frame" x="35" y="41" width="437" height="354"/>
+                        <rect key="frame" x="26" y="16" width="437" height="332"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView" ambiguous="YES" id="dJq-6S-VPl">
-                            <rect key="frame" x="0.0" y="0.0" width="437" height="354"/>
+                            <rect key="frame" x="0.0" y="0.0" width="437" height="332"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ofP-6U-WCq">
-                                    <rect key="frame" x="18" y="310" width="185" height="26"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="toL-fX-yfV">
-                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="menu"/>
-                                        <menu key="menu" id="1Mi-xS-usL"/>
-                                    </popUpButtonCell>
-                                    <connections>
-                                        <action selector="changeViewController:" target="-2" id="FBn-lq-Kdo"/>
-                                    </connections>
-                                </popUpButton>
-                            </subviews>
                         </view>
                     </box>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ofP-6U-WCq">
+                        <rect key="frame" x="36" y="369" width="185" height="26"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="toL-fX-yfV">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" id="1Mi-xS-usL"/>
+                        </popUpButtonCell>
+                        <connections>
+                            <action selector="changeViewController:" target="-2" id="FBn-lq-Kdo"/>
+                        </connections>
+                    </popUpButton>
                 </subviews>
             </view>
             <connections>
