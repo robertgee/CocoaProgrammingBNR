@@ -70,6 +70,9 @@
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="9Jh-9n-xnv" name="value" keyPath="objectValue" id="X8k-z6-n1r"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <connections>
